@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "CartographMonoCF";
+    src: url("./font/CartographMonoCF-Bold.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("./font/BebasNeue-Regular.ttf");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#scoreboard {
+    display: flex;
+}
+
+#ylw-container {
+    height: 145px;
+    width: 740px;
+    background-color: #fdbf11;
+    border-radius: 20px 0 0 20px;
+
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+#ylw-info {
+    position: relative;
+    right: 0;
+    background-color: black;
+    height: 100%;
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+    border-left: none;
+    box-sizing: border-box;
+}
+
+#ylw-info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fdbf11;
+    background-image: url("./img/NameBackgroundLeft.png");
+    filter: brightness(0.8);
+    z-index: 1;
+}
+
+#ylw-info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+#ylw-player-name {
+    height: 70%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+    align-items: center;  
+}
+
+#ylw-player-info {
+    display: flex;
+    border-top: 5px solid black;
+
+    flex-grow: 1;
+    z-index: 2;
+    
+    background-color: #fdbf11;
+}
+
+#x-logo-yellow {
+    background-color: black;
+    width: 30px;
+    background-image: url("./img/XLogoYellow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ylw-content {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#x-logo-blue {
+    background-color: black;
+    width: 30px;
+    background-image: url("./img/XLogoBlue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player-info-text {
+    font-family: "BebasNeue";
+    font-size: 30px;
+    color: black;
+}
+
+#ylw-score-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+    border-right: 1px solid black;
+    border-left: none;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100%;
+}
+
+#ylw-score-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fdbf11;
+    filter: brightness(0.5);
+    z-index: 1;
+}
+
+#ylw-score {
+    height: 70%;
+    width: 100%;
+
+    color: white;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ylw-score-btm {
+    background-color: black;
+    width: 100%;
+    flex-grow: 1;
+    z-index: 2;
+}
+
+#blue-container {
+    height: 145px;
+    width: 740px;
+    background-color: #1c98fe;
+    border-radius: 0 20px 20px 0;
+
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    justify-content: flex-end;
+}
+
+#blue-info {
+    position: relative;
+    right: 0;
+    background-color: black;
+    height: 100%;
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+    border-right: none;
+    box-sizing: border-box;
+}
+
+#blue-info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1c98fe;
+    background-image: url("./img/NameBackgroundRight.png");
+    filter: brightness(0.8);
+    z-index: 1;
+}
+
+#blue-info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+#blue-player-name {
+    height: 70%;
+    z-index: 999;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;  
+}
+
+#blue-player-info {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 5px solid black;
+
+    flex-grow: 1;
+    z-index: 2;
+    
+    background-color: #1c98fe;
+}
+
+#blue-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#blue-score-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100%;
+}
+
+#blue-score-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1c98fe;
+    filter: brightness(0.5);
+    z-index: 1;
+}
+
+#blue-score {
+    height: 70%;
+    width: 100%;
+    color: white;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+#blue-score-btm {
+    background-color: black;
+    width: 100%;
+    flex-grow: 1;
+    z-index: 2;
+}
+
+.score-text {
+    font-size: 90px;
+    font-family: "CartographMonoCF";
+    padding-bottom: 10px;
+}
+
+.player-name {
+    font-size: 90px;
+    font-family: "BebasNeue";
+    color: white;
+    line-height: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
