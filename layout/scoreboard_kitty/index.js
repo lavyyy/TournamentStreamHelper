@@ -20,7 +20,7 @@ LoadEverything().then(() => {
           for (const [p, player] of [team.player["1"]].entries()) {
             if (player) {
               SetInnerHtml(
-                $(`.p${t + 1}.player-name`), `${player.name}`
+                $(`.p${t + 1}.player-name`), `<span style=${t + 1 === 1 ? "color:#fdbf11" : "color:#1c98fe"}>${player.team}</span>${player.team !== "" ? " " : ""}${player.name}`
               );
 
               SetInnerHtml(
@@ -42,4 +42,3 @@ LoadEverything().then(() => {
       }
     };
   });
-  

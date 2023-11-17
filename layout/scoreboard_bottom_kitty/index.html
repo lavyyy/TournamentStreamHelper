@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="../include/globals.js"></script>
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <!-- Top scoreboard -->
+        <div id="scoreboard">
+            <!-- Yellow -->
+            <div id="ylw-container">
+                <img src="./img/Logo.png" style="padding-right: 10px;" />
+                <div id="ylw-info">
+                    <div id="ylw-player-name">
+                        <p class="p1 player-name" id="test"></p>
+                    </div>
+                    <div id="ylw-player-info">
+                        <div id="x-logo-yellow"></div>
+                        <div id="ylw-content">
+                            <p class="p1 twitter player-info-text"></p>
+                            <img src="./img/paws.png" />
+                            <p class="p1 player-info-text pronouns"></p>
+                            <img src="./img/paws.png" />
+                            <p class="p1 player-info-text seed"></p>
+                        </div>
+                    </div>    
+                </div>
+                <div id="ylw-score-container">
+                    <div id="ylw-score">
+                        <p class="p1 score-text"></p>
+                    </div>
+                    <div id="ylw-score-btm"></div>
+                </div>
+            </div>
+
+            <!-- Blue -->
+            <div id="blue-container">
+                <div id="local-time-text">
+                    <p class="time-text" id="clock"></p>
+                    <div id="time-inner">
+                        <p class="time-text">EST</p>
+                        <p class="time-text">LOCAL TIME</p>
+                    </div>
+                </div>
+                <div id="blue-info">
+                    <div id="blue-player-name">
+                        <p class="p2 player-name"></p>
+                    </div>
+                    <div id="blue-player-info">
+                        <div id="x-logo-blue"></div>
+                        <div id="blue-content">
+                            <p class="p2 player-info-text twitter"></p>
+                            <img src="./img/paws.png" />
+                            <p class="p2 player-info-text pronouns"></p>
+                            <img src="./img/paws.png" />
+                            <p class="p2 player-info-text seed"></p>
+                        </div>
+                    </div>    
+                </div>
+                <div id="blue-score-container">
+                    <div id="blue-score">
+                        <p class="p2 score-text"></p>
+                    </div>
+                    <div id="blue-score-btm"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function updateClock() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var ampm = hours >= 12 ? 'PM' : 'AM';
+            
+                hours = hours % 12;
+                hours = hours ? hours : 12; // the hour '0' should be '12'
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+            
+                var timeString = hours + ':' + minutes + ' ' + ampm;
+            
+                document.getElementById('clock').innerText = timeString;
+            }
+            
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
+
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "CartographMonoCF";
+    src: url("./font/CartographMonoCF-Bold.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("./font/BebasNeue-Regular.ttf");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#scoreboard {
+    display: flex;
+}
+
+#container {
+    height: 145px;
+    width: 740px;
+    background-color: #fdbf11;
+    border-radius: 20px 0 0 20px;
+
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+#info {
+    position: relative;
+    right: 0;
+    background-color: black;
+    height: 119px;
+    width: 455px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+    border-left: none;
+    box-sizing: border-box;
+
+    background: linear-gradient(to right, rgba(253, 191, 17, 255), rgba(28, 152, 254, 255));
+    filter: brightness(0.8);
+    z-index: 999;
+}
+
+#info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("./img/BG.png");
+    filter: brightness(0.8);
+    z-index: 1;
+}
+
+#info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+    z-index: 1;
+}
+
+#comm-name {
+    width: 100%;
+    height: 70%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+    align-items: center;  
+}
+
+#player-info {
+    display: flex;
+    gap: 5px;
+    border-top: 5px solid black;
+
+    flex-grow: 1;
+    z-index: 2;
+    
+    background: linear-gradient(to right,
+  rgba(228, 187, 44, 1) 0%, 
+  rgba(202, 182, 70, 1) 22.2%, 
+  rgba(177, 178, 97, 1) 33.3%, 
+  rgba(151, 173, 124, 1) 44.4%, 
+  rgba(126, 169, 151, 1) 55.6%, 
+  rgba(101, 165, 178, 1) 66.7%, 
+  rgba(75, 160, 205, 1) 77.8%, 
+  rgba(50, 156, 231, 1) 100%);
+}
+
+#x-logo {
+    background-color: black;
+    width: 30px;
+    background-image: url("./img/Xlogo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#x-logo-blue {
+    background-color: black;
+    width: 30px;
+    background-image: url("./img/XLogoBlue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player-info-text {
+    font-family: "BebasNeue";
+    font-size: 30px;
+    color: black;
+}
+
+#score-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+    border-right: 1px solid black;
+    border-left: none;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100%;
+}
+
+#score-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fdbf11;
+    filter: brightness(0.5);
+    z-index: 1;
+}
+
+#score {
+    height: 70%;
+    width: 100%;
+
+    color: white;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-btm {
+    background-color: black;
+    width: 100%;
+    flex-grow: 1;
+    z-index: 2;
+}
+
+.score-text {
+    font-size: 90px;
+    font-family: "CartographMonoCF";
+    padding-bottom: 10px;
+}
+
+.comm-name {
+    font-size: 90px;
+    overflow: hidden;
+    width: 100%;
+    font-family: "BebasNeue";
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
